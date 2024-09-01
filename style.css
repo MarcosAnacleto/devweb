@@ -1,34 +1,90 @@
-/* Estilos básicos para a página */
+/* Paleta de cores */
+:root {
+    --cor-primaria: #4CAF50; /* Verde */
+    --cor-secundaria: #f44336; /* Vermelho */
+    --cor-destaque: #2196F3; /* Azul */
+    --cor-fundo: #f0f0f0;
+    --cor-texto: #333;
+}
+
+/* Estilos básicos */
 body {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    color: var(--cor-texto);
 }
 
+/* Cabeçalho */
 header {
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+h1 {
+    margin: 0;
+}
+
+/* Navegação */
 nav ul {
     list-style: none;
     padding: 0;
+    margin-top: 10px;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Conteúdo principal */
 main {
     padding: 20px;
 }
 
 section {
     margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
+h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+/* Seção "Sobre Mim" */
+#sobre p {
+    line-height: 1.6;
+}
+
+/* Seção "Formação Acadêmica" */
+#formacao ul {
+    list-style: none;
+    padding: 0;
+}
+
+#formacao li {
+    margin-bottom: 10px;
+}
+
+/* Seção "Portfólio" */
 .projetos {
     display: flex;
     flex-wrap: wrap;
@@ -39,10 +95,32 @@ section {
     width: 300px;
     margin-bottom: 20px;
     text-align: center;
+    transition: transform 0.3s;
 }
 
+.projeto:hover {
+    transform: translateY(-5px);
+}
+
+.projeto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção "Contato" */
+#contato {
+    text-align: center;
+}
+
+#contato p {
+    margin: 10px 0;
+}
+
+/* Rodapé */
 footer {
-    background-color: #f0f0f0;
+    background-color: var(--cor-fundo);
     padding: 10px;
     text-align: center;
 }
